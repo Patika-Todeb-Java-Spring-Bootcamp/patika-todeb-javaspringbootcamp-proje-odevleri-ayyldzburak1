@@ -21,8 +21,7 @@ public class Customer {
     private Long id; //customer_id , id
     private String name;
 
-    //TODO: cascade all, ve merge dene
     @OneToMany(cascade = CascadeType.ALL,fetch = LAZY)
     @JoinColumn(name = "customer_id")
-    private List<Order> orders;
+    private List<Orders> orders;
 }

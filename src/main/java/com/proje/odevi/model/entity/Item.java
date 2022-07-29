@@ -1,25 +1,27 @@
-//package com.odev.odev3.model;
-//
-//import lombok.*;
-//
-//import javax.persistence.*;
-//
-//@Entity
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@Table(name= "item")
-//public class Item {
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    //TODO: Learn GenerationType.AUTO
-//    //@Column(name = "item_id")
-//    private Long itemId;
-//    private String name;
-//    //private User user;
-//    @ManyToOne(fetch = FetchType.LAZY)
-//   //@JoinColumn(name = "item_id", referencedColumnName = "order_id")
-//    @JoinColumn()
-//    private Order order;
-//}
+package com.proje.odevi.model.entity;
+
+
+import lombok.*;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "items")
+public class Item {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
+    private Long itemId;
+    private String name;
+    private double price;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+
+    @JoinColumn()
+    private Orders orders;
+}
