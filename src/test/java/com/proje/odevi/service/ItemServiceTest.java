@@ -2,6 +2,7 @@ package com.proje.odevi.service;
 
 
 import com.proje.odevi.model.entity.Item;
+import com.proje.odevi.model.entity.Orders;
 import com.proje.odevi.repository.ItemRepository;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -30,9 +31,9 @@ public class ItemServiceTest {
     void getAllItem() {
         // init
         List<Item> expItemList = new ArrayList<>();
-        Item item1 = new Item();
-        Item item2 = new Item();
-        Item item3 = new Item();
+        Item item1 = new Item(1L, "Car1", 1000.00, null);
+        Item item2 = new Item(2L, "Car2", 1000.00, null);
+        Item item3 = new Item(3L, "Car3", 1000.00, null);
         expItemList.add(item2);
         expItemList.add(item1);
         expItemList.add(item3);
